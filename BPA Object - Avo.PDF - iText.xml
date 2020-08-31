@@ -1,0 +1,1736 @@
+﻿<process name="Avo.PDF - iText" version="1.0" bpversion="6.8.0.23415" narrative="Work with PDF files using iText libraries. &#xD;&#xA;&#xD;&#xA;This object is liscensed under the AGPL license." byrefcollection="true" type="object" runmode="Exclusive" preferredid="a4e3e301-603e-49aa-a9fa-27f3371139ca">
+  <appdef>
+    <element name="Application Root">
+      <id>baec4ec7-3a0e-4694-a83b-2adf94cca81c</id>
+      <type>Application</type>
+      <basetype>Application</basetype>
+      <datatype>unknown</datatype>
+      <diagnose>False</diagnose>
+    </element>
+  </appdef>
+  <view>
+    <camerax>298</camerax>
+    <cameray>42</cameray>
+    <zoom version="2">1.25</zoom>
+  </view>
+  <preconditions>
+    <condition narrative="iText.Kernel.dll" />
+    <condition narrative="iText.IO.dll" />
+    <condition narrative="BouncyCastle.Crypto.dll" />
+    <condition narrative="Common.Logging.Core.dll" />
+    <condition narrative="Common.Logging.dll" />
+    <condition narrative="iText.Layout.dll" />
+  </preconditions>
+  <endpoint narrative="" />
+  <subsheet subsheetid="8351ec94-a061-460c-be12-849d09ae34ac" type="CleanUp" published="True">
+    <name>Clean Up</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="b73f7c23-c37f-422f-90d2-baec3ade9af8" type="Normal" published="True">
+    <name>Read PDF</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="eeff18ef-79a2-4501-aaa4-62fdab995e90" type="Normal" published="True">
+    <name>Set Password</name>
+    <view>
+      <camerax>51</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="05dbb5c6-4418-4b72-8212-b6de0e7350a9" type="Normal" published="True">
+    <name>Remove Password</name>
+    <view>
+      <camerax>0</camerax>
+      <cameray>0</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="d7f584cb-5dd5-44fe-a967-5a02fd87fa7f" type="Normal" published="True">
+    <name>Split PDF</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="08eef38d-430c-4ce5-af4e-f59e792c2d38" type="Normal" published="True">
+    <name>Merge PDF</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="01e7a2fa-5c60-481c-8d5d-834d9335ada2" type="Normal" published="True">
+    <name>Extract Pages</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="3b29efed-4741-429d-9828-7c9545864d35" type="Normal" published="True">
+    <name>Count Pages</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3" type="Normal" published="True">
+    <name>Add Watermark - Text</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="c2db3774-8ad7-45d3-aa27-9d34b1d13eab" type="Normal" published="True">
+    <name>Add Watermark - Image</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <subsheet subsheetid="44cd2379-9f9e-4116-8666-150a5f97bbdc" type="Normal" published="True">
+    <name>Create PDF from Text</name>
+    <view>
+      <camerax>298</camerax>
+      <cameray>42</cameray>
+      <zoom version="2">1.25</zoom>
+    </view>
+  </subsheet>
+  <stage stageid="77c114f6-ff05-425f-9209-e24c1f379654" name="Start" type="Start">
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>6bacb4d1-20cd-4887-be35-64f5d6becdf1</onsuccess>
+  </stage>
+  <stage stageid="6bacb4d1-20cd-4887-be35-64f5d6becdf1" name="End" type="End">
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="571059ca-c072-40f7-b6d9-765dd04c107f" name="Stage1" type="ProcessInfo">
+    <display x="-255" y="-150" w="360" h="150" />
+    <references>
+      <reference>System.dll</reference>
+      <reference>System.Data.dll</reference>
+      <reference>System.Xml.dll</reference>
+      <reference>System.Drawing.dll</reference>
+      <reference>iText.Kernel.dll</reference>
+      <reference>iText.IO.dll</reference>
+      <reference>System.Collections.dll</reference>
+      <reference>iText.Layout.dll</reference>
+    </references>
+    <imports>
+      <import>System</import>
+      <import>System.Drawing</import>
+      <import>System.Data</import>
+      <import>System.IO</import>
+      <import>iText.Kernel.Font</import>
+      <import>iText.Kernel.Pdf</import>
+      <import>iText.Kernel.Pdf.Canvas.Parser</import>
+      <import>iText.Kernel.Pdf.Canvas.Parser.Listener</import>
+      <import>System.Text</import>
+      <import>System.Collections.Generic</import>
+      <import>iText.Layout</import>
+      <import>iText.Layout.Element</import>
+      <import>iText.IO.Font</import>
+      <import>iText.IO.Font.Constants</import>
+      <import>iText.Kernel.Pdf.Extgstate</import>
+      <import>iText.Layout.Properties</import>
+      <import>iText.Kernel.Colors</import>
+      <import>iText.IO.Image</import>
+      <import>iText.Kernel.Pdf.Canvas</import>
+    </imports>
+    <language>csharp</language>
+    <globalcode><![CDATA[]]></globalcode>
+    <code><![CDATA[public string ReadPDF(string filepath, string password)
+{
+	string content = "";
+	//Get password
+	ReaderProperties readerProperties = new ReaderProperties();
+	readerProperties.SetPassword(Encoding.ASCII.GetBytes(password));
+	//Read PDF bytes
+	PdfReader pdfReader = new PdfReader(filepath, readerProperties);
+	pdfReader.SetUnethicalReading(true);
+	PdfDocument pdfDocument = new PdfDocument(pdfReader);
+	//Extract text page by page
+	int numberOfPages = pdfDocument.GetNumberOfPages();
+	for (int page = 1; page <= numberOfPages; page++)
+	{
+		ITextExtractionStrategy extractionStrategy = new SimpleTextExtractionStrategy();
+		string pageContent = PdfTextExtractor.GetTextFromPage(pdfDocument.GetPage(page), extractionStrategy);
+		content = content + pageContent;
+	}
+	//close reader and document
+	pdfDocument.Close();
+	pdfReader.Close();
+	//return text from document
+	return content;
+}
+
+public static void SetPassword(string filepath, string oldPassword, string newPassword, string encryptionAlgo)
+{
+	//Get old password
+	var oldPasswordBytes = Encoding.ASCII.GetBytes(oldPassword);
+	ReaderProperties currentReaderProperties = new ReaderProperties();
+	currentReaderProperties.SetPassword(oldPasswordBytes);
+	//Create reader object
+	PdfReader pdfReader = new PdfReader(filepath, currentReaderProperties);
+	pdfReader.SetUnethicalReading(true);
+	//Set encryption algorithm
+	int encConst = new int();
+	if(encryptionAlgo == "AES256")
+	{
+		encConst = EncryptionConstants.ENCRYPTION_AES_256;
+	}
+	else if(encryptionAlgo == "AES128")
+	{
+		encConst = EncryptionConstants.ENCRYPTION_AES_128;
+	}
+	else if(encryptionAlgo == "STD128")
+	{
+		encConst = EncryptionConstants.STANDARD_ENCRYPTION_128;
+	}
+	else if(encryptionAlgo == "STD40")
+	{
+		encConst = EncryptionConstants.STANDARD_ENCRYPTION_40;
+	}
+	else
+	{
+		encConst = EncryptionConstants.ENCRYPTION_AES_256;
+	}
+	//Get new password
+	var newPasswordBytes = Encoding.ASCII.GetBytes(newPassword);
+	WriterProperties newWriterProperties = new WriterProperties();
+	newWriterProperties.SetStandardEncryption(newPasswordBytes, newPasswordBytes, EncryptionConstants.ALLOW_ASSEMBLY, encConst | EncryptionConstants.DO_NOT_ENCRYPT_METADATA);
+	//Create a temp file to do changes to
+	string tempFilepath = GetTempFilepath(filepath);
+	
+	PdfWriter pdfWriter = new PdfWriter(tempFilepath, newWriterProperties);
+	PdfDocument pdfDocument = new PdfDocument(pdfReader, pdfWriter);
+	pdfDocument.Close();
+	//delete old file
+	File.Delete(filepath);
+	//move temp file to match original filepath
+	File.Move(tempFilepath, filepath);
+}
+
+public static void RemovePassword(string filepath, string oldPassword)
+{
+	//Get old password
+	var oldPasswordBytes = Encoding.ASCII.GetBytes(oldPassword);
+	ReaderProperties currentReaderProperties = new ReaderProperties();
+	currentReaderProperties.SetPassword(oldPasswordBytes);
+	//Create reader object
+	PdfReader pdfReader = new PdfReader(filepath, currentReaderProperties);
+	pdfReader.SetUnethicalReading(true);
+	
+	//Create a temp file to do changes to
+	string tempFilepath = GetTempFilepath(filepath);
+	PdfWriter pdfWriter = new PdfWriter(tempFilepath);
+	PdfDocument pdfDocument = new PdfDocument(pdfReader, pdfWriter);
+	pdfDocument.Close();
+	pdfWriter.Close();
+	pdfReader.Close();
+	//delete old file
+	File.Delete(filepath);
+	//move temp file to match original filepath
+	File.Move(tempFilepath, filepath);
+}
+	
+public DataTable SplitPDF(string filepath, string password, string outputFolder)
+{
+	DataTable dt = new DataTable();
+	dt.Columns.Add("Filepath", typeof(String));
+	//Add \ to FolderPath if missing
+	if(!outputFolder.EndsWith("\\"))
+	{
+		outputFolder = outputFolder+"\\";
+	}
+	//Create Folder if does not already exists
+	 if (!(Directory.Exists(outputFolder)))
+     {
+        Directory.CreateDirectory(outputFolder);
+     }
+	//Get filename
+	string fileName = Path.GetFileName(filepath);
+	//Get password
+	ReaderProperties readerProperties = new ReaderProperties();
+	readerProperties.SetPassword(Encoding.ASCII.GetBytes(password));
+	//Read PDF bytes
+	PdfReader pdfReader = new PdfReader(filepath, readerProperties);
+	pdfReader.SetUnethicalReading(true);
+	PdfDocument pdfDocument = new PdfDocument(pdfReader);
+	int numberOfPages = pdfDocument.GetNumberOfPages();
+	
+	for (int page = 1; page <= numberOfPages; page++)
+	{
+		string pagePath = outputFolder+fileName.Replace(".pdf", "_page") + page + ".pdf";
+		if(File.Exists(pagePath))
+		{
+			int i = 0;
+			do
+			{
+				i = i+1;
+				pagePath = pagePath.Replace(".pdf", "_" + i + ".pdf");
+			} while (File.Exists(pagePath) == true);
+		}
+		PdfDocument pageDoc = new PdfDocument(new PdfWriter(pagePath));
+		pdfDocument.CopyPagesTo(page, page, pageDoc);
+		DataRow row = dt.NewRow();
+		row["Filepath"] = pagePath;
+		dt.Rows.Add(row);
+		pageDoc.Close();
+	}
+	pdfReader.Close();
+	pdfDocument.Close();
+	return dt;
+}
+
+public int GetPageCount(string filepath, string password)
+{
+	//Get password
+	ReaderProperties readerProperties = new ReaderProperties();
+	readerProperties.SetPassword(Encoding.ASCII.GetBytes(password));
+	//Read PDF bytes
+	PdfReader pdfReader = new PdfReader(filepath, readerProperties);
+	pdfReader.SetUnethicalReading(true);
+	PdfDocument pdfDocument = new PdfDocument(pdfReader);
+	//Get number of pages in document
+	int numberOfPages = pdfDocument.GetNumberOfPages();
+	pdfReader.Close();
+	pdfDocument.Close();
+	return numberOfPages;
+}
+
+public static void MergePDF(DataTable files, string filepath)
+{
+	PdfWriter pdfWriter = new PdfWriter(filepath);
+	pdfWriter.SetSmartMode(true);
+	PdfDocument pdfDocument = new PdfDocument(pdfWriter);
+	pdfDocument.InitializeOutlines();
+	
+	foreach(DataRow row in files.Rows)
+	{
+		string path = row["Path"].ToString();
+		PdfReader reader = new PdfReader(path);
+		PdfDocument doc = new PdfDocument(reader);
+		doc.CopyPagesTo(1, doc.GetNumberOfPages(), pdfDocument);
+		reader.Close();
+		doc.Close();
+	}
+	pdfWriter.Close();
+	pdfDocument.Close();
+}
+
+public static void ExtractPages(string outputFilepath, string inputFilepath, List<int> Pages)
+{
+	PdfWriter pdfWriter = new PdfWriter(outputFilepath);
+	pdfWriter.SetSmartMode(true);
+	PdfDocument pdfDocument = new PdfDocument(pdfWriter);
+	pdfDocument.InitializeOutlines();
+	
+	PdfReader reader = new PdfReader(inputFilepath);
+	PdfDocument doc = new PdfDocument(reader);
+	
+	Pages.ForEach(idx =>
+	{
+		doc.CopyPagesTo(idx, idx, pdfDocument);
+	});
+	pdfWriter.Close();
+	pdfDocument.Close();
+	reader.Close();
+	doc.Close();
+}
+
+public static void AddWatermarkText(string filepath, string password, string watermark, string fontName, int fontSize, float opacity, int r, int g, int b, float rotation)
+{
+	//Get password
+	ReaderProperties readerProperties = new ReaderProperties();
+	readerProperties.SetPassword(Encoding.ASCII.GetBytes(password));
+	//Read PDF bytes
+	PdfReader pdfReader = new PdfReader(filepath, readerProperties);
+	pdfReader.SetUnethicalReading(true);
+	string tempFilepath = GetTempFilepath(filepath);
+	PdfWriter pdfWriter = new PdfWriter(tempFilepath);
+	
+	PdfDocument pdfDocument = new PdfDocument(pdfReader, pdfWriter);
+	
+	Document document = new Document(pdfDocument);
+	
+	PdfFont font = PdfFontFactory.CreateFont(GetFontPath(fontName));
+	Paragraph paragraph = new Paragraph(watermark);
+	paragraph.SetFont(font);
+	paragraph.SetFontSize(fontSize);
+	iText.Kernel.Colors.Color color = new iText.Kernel.Colors.DeviceRgb(r, g, b);
+	paragraph.SetFontColor(color);
+	
+	PdfExtGState gs1 = new PdfExtGState().SetFillOpacity(opacity);
+	
+	for (int i = 1; i <= pdfDocument.GetNumberOfPages(); i++) {
+
+        PdfPage pdfPage = pdfDocument.GetPage(i);
+        iText.Kernel.Geom.Rectangle pageSize = pdfPage.GetPageSizeWithRotation();
+
+        // When "true": in case the page has a rotation, then new content will be automatically rotated in the
+        // opposite direction. On the rotated page this would look as if new content ignores page rotation.
+        pdfPage.SetIgnorePageRotationForContent(true);
+
+       float x = (pageSize.GetLeft() + pageSize.GetRight()) / 2;
+       float y = (pageSize.GetTop() + pageSize.GetBottom()) / 2;
+	   
+	   //convert degrees to radians
+	   double degrees = rotation*(Math.PI/180);
+	   rotation = (float)degrees;
+	   
+       document.ShowTextAligned(paragraph, x, y, i, TextAlignment.CENTER, VerticalAlignment.TOP, rotation);
+	}
+	document.Close();
+	pdfDocument.Close();
+	pdfWriter.Close();
+	pdfReader.Close();
+	//delete old file
+	File.Delete(filepath);
+	//move temp file to match original filepath
+	File.Move(tempFilepath, filepath);
+}
+
+public static void AddWatermarkImage(string filepath, string password, string imagepath, int opacity)
+{
+	ImageData img = ImageDataFactory.Create(imagepath);
+	float w = img.GetWidth();
+	float h = img.GetHeight();
+	
+	//Get password
+	ReaderProperties readerProperties = new ReaderProperties();
+	readerProperties.SetPassword(Encoding.ASCII.GetBytes(password));
+	//Read PDF bytes
+	PdfReader pdfReader = new PdfReader(filepath, readerProperties);
+	pdfReader.SetUnethicalReading(true);
+	string tempFilepath = GetTempFilepath(filepath);
+	PdfWriter pdfWriter = new PdfWriter(tempFilepath);
+	
+	PdfDocument pdfDocument = new PdfDocument(pdfReader, pdfWriter);
+	
+	Document document = new Document(pdfDocument);
+	
+	PdfExtGState gs1 = new PdfExtGState().SetFillOpacity(opacity);
+	
+	for (int i = 1; i <= pdfDocument.GetNumberOfPages(); i++) {
+		PdfPage pdfPage = pdfDocument.GetPage(i);
+        iText.Kernel.Geom.Rectangle pageSize = pdfPage.GetPageSizeWithRotation();
+
+        // When "true": in case the page has a rotation, then new content will be automatically rotated in the
+        // opposite direction. On the rotated page this would look as if new content ignores page rotation.
+        pdfPage.SetIgnorePageRotationForContent(true);
+
+		float x = (pageSize.GetLeft() + pageSize.GetRight()) / 2;
+		float y = (pageSize.GetTop() + pageSize.GetBottom()) / 2;
+		PdfCanvas over = new PdfCanvas(pdfDocument.GetPage(i));
+        over.SaveState();
+        over.SetExtGState(gs1);
+		over.AddImage(img, w, 0, 0, h, x - (w / 2), y - (h / 2), false);
+		over.RestoreState();
+	}
+	document.Close();
+	pdfDocument.Close();
+	pdfWriter.Close();
+	pdfReader.Close();
+	//delete old file
+	File.Delete(filepath);
+	//move temp file to match original filepath
+	File.Move(tempFilepath, filepath);
+	
+}
+
+public static void CreatePDFText(string filepath, string text)
+{
+	PdfWriter pdfWriter = new PdfWriter(filepath);
+	PdfDocument pdfDocument = new PdfDocument(pdfWriter);
+	Document document = new Document(pdfDocument);
+	Paragraph paragraph = new Paragraph(text);
+	document.Add(paragraph);
+	document.Close();
+	pdfDocument.Close();
+	pdfWriter.Close();
+}
+
+public static string GetTempFilepath(string filepath)
+{
+	string tempFilepath = "";
+	if (File.Exists(filepath.Replace(".pdf", "") + "_temp.pdf"))
+	{
+		int i = 0;
+		do
+		{
+			i = i+1;
+		}  while (File.Exists(filepath.Replace(".pdf", "") + "_temp" + i + ".pdf") == true);
+		tempFilepath = filepath.Replace(".pdf", "") + "_temp" + i + ".pdf";
+	}
+	else
+	{
+		tempFilepath = filepath.Replace(".pdf", "") + "_temp.pdf";
+	}
+	return tempFilepath;
+}
+
+public static string GetFontPath(string font)
+{
+	string fontsfolder = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Fonts);
+	string fontpath = fontsfolder + "\\" + font + ".ttf";
+	return fontpath;
+}]]></code>
+  </stage>
+  <stage stageid="048c0447-6ca8-40d6-8699-5565c9a96423" name="Clean Up" type="SubSheetInfo">
+    <subsheetid>8351ec94-a061-460c-be12-849d09ae34ac</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="8182788e-fcc5-4e8c-aac4-b93aac000fed" name="Start" type="Start">
+    <subsheetid>8351ec94-a061-460c-be12-849d09ae34ac</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <onsuccess>5d7b6dc5-2584-40e8-beea-806b375f8a36</onsuccess>
+  </stage>
+  <stage stageid="5d7b6dc5-2584-40e8-beea-806b375f8a36" name="End" type="End">
+    <subsheetid>8351ec94-a061-460c-be12-849d09ae34ac</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+  </stage>
+  <stage stageid="2fa7b60c-f7d9-4414-8965-b64baaacd40a" name="Read PDF" type="SubSheetInfo">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <narrative>Extract text from the PDF file.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="4697f82e-927c-4b86-863f-ed2bcbf78b01" name="Start" type="Start">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Filepath to pdf to read" stage="Filepath" />
+      <input type="text" name="Password" narrative="Provide password if file is protected" stage="Password" />
+    </inputs>
+    <onsuccess>385ac9d9-5e02-449e-9f0a-21a3e067006f</onsuccess>
+  </stage>
+  <stage stageid="0a660671-7790-4846-80a2-f9f660cbdc56" name="End" type="End">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="text" name="Content" narrative="Text content from PDF file" stage="Content" />
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="5f7b12f0-58d1-4d1b-a103-22240f69dde9" name="Note1" type="Note">
+    <subsheetid>8351ec94-a061-460c-be12-849d09ae34ac</subsheetid>
+    <narrative>Clean Up Page
+
+This is an optional page where you might choose to perform some finalisation (or "cleanup") tasks as your business object is closed down.
+
+The cleanup action will be called automatically immediately after closing your business object at the end of a business process.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than before the disposal of the business object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="2ecd7979-e558-487e-a0b7-09c2e0239846" name="Note2" type="Note">
+    <narrative>Initialise Page
+
+This is an optional page where you might choose to perform some initialisation tasks after your business object is loaded.
+
+The initialise action will be called automatically immediately after loading your business object.
+
+You will not be able to call this action from a business process, nor will it be called at any other time than after the creation of the object.</narrative>
+    <display x="-180" y="60" w="180" h="230" />
+  </stage>
+  <stage stageid="b3cdd3bf-1cba-4688-8fb4-61fd2b4a6ad7" name="Set Password" type="SubSheetInfo">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <narrative>Change password on a pdf file.
+Remove password by sending in a blank New Password.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="16b81e7d-6209-454a-8ed7-44fd0ff8b29b" name="Start" type="Start">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Filepath to pdf" stage="Filepath" />
+      <input type="text" name="Old Password" narrative="Provide the current password if the file is already protected" stage="Old Password" />
+      <input type="text" name="New Password" narrative="The new password. Leave blank if password is to be removed." stage="New Password" />
+      <input type="text" name="Encryption" narrative="Encryption algorithm to use. Default: AES256. Alternatives: AES256, AES128, STD128, STD40." stage="Encryption" />
+    </inputs>
+    <onsuccess>46c3cbb6-30eb-4d47-9c96-0f407d5134b0</onsuccess>
+  </stage>
+  <stage stageid="13a1c47a-cd79-4aa9-8fd7-183507238c18" name="End" type="End">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="834ac8d8-d42a-4a9e-bf1e-d149b8b482de" name="Split PDF" type="SubSheetInfo">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <narrative>Split a PDF file into a file per page.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="d86872b5-9bfc-4a80-8fe2-4aab6696c52a" name="Start" type="Start">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Location of the file to split" stage="Filepath" />
+      <input type="text" name="Password" narrative="Provide the password to the file if protected" stage="Password" />
+      <input type="text" name="Output Folder" narrative="Folder where splitted pages are to be saved" stage="Output Folder" />
+    </inputs>
+    <onsuccess>2e8f1623-9db5-4660-8f6d-940c33353983</onsuccess>
+  </stage>
+  <stage stageid="88c044ee-1418-408f-bc8b-cd1b73146d38" name="End" type="End">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+      <output type="collection" name="Documents" stage="Documents" />
+    </outputs>
+  </stage>
+  <stage stageid="09b70972-99aa-42fb-ac87-c73625c491f1" name="Merge PDF" type="SubSheetInfo">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <narrative>Merge PDF files into a singe file. First page in the file in row 1 in the Files collection will be the first page in the merged document etc.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="a6572390-31ca-42cb-a3df-5fff57d67764" name="Start" type="Start">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="collection" name="Files" narrative="Collection with filepaths to documents to merge. Filepath in the Path column in the collection." stage="Files" />
+      <input type="text" name="Merged Filepath" narrative="Filepath to the document that will be created with the merged pdfs" stage="Merged Filepath" />
+    </inputs>
+    <onsuccess>8382d8ec-7aaa-44bc-ae9d-203e531a6aa6</onsuccess>
+  </stage>
+  <stage stageid="26801041-92d8-490c-bdae-d8bace005d7e" name="End" type="End">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="e3831d09-01b4-463d-a793-7d4bf922d662" name="Extract Pages" type="SubSheetInfo">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <narrative>Copy specified pages into a new file. The range of pages can be specified in a usual syntax for i.e selecting which pages to print.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="881c9f0e-3a38-41e4-ae1a-30ea59315425" name="Start" type="Start">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Original Filepath" narrative="Filepath to file to extract pages to" stage="Original Filepath" />
+      <input type="text" name="Extracted Filepath" narrative="Filepath to new file with only extracted pages" stage="Extracted Filepath" />
+      <input type="text" name="Pages" narrative="Range of pages, i.e &quot;1-3, 5&quot;" stage="Pages" />
+    </inputs>
+    <onsuccess>c32de3a5-c310-49cb-84b0-d8e86b7be77a</onsuccess>
+  </stage>
+  <stage stageid="b90c24f3-2ad3-4ed6-852e-6f78ff3e9fb5" name="End" type="End">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="94cae5b6-fd28-4832-93ea-745c828470c6" name="Count Pages" type="SubSheetInfo">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <narrative>Returns the number of pages in the PDF document. 
+NB: Does not read the page numbers in the file.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="326b6280-7627-4cfd-9393-3ddbb86d70e4" name="Start" type="Start">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" stage="Filepath" />
+      <input type="text" name="Password" stage="Password" />
+    </inputs>
+    <onsuccess>c20bc2f3-9787-4a91-b6fe-6859f09e8108</onsuccess>
+  </stage>
+  <stage stageid="31ace845-2b00-412e-9aa4-a00afa32d457" name="End" type="End">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="number" name="Pages" stage="Pages" />
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="996f1750-87b1-4008-8e25-7dab964bbc08" name="Add Watermark - Text" type="SubSheetInfo">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <narrative>Adds a text watermark to every page in the PDF file.</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="e094c07a-d4a7-4f02-8122-3b50b5a7ba6b" name="Start" type="Start">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Path to pdf to watermark" stage="Filepath" />
+      <input type="text" name="Password" narrative="OPTIONAL: Provide if password protected" stage="Password" />
+      <input type="text" name="Watermark" narrative="Watermark text" stage="Watermark" />
+      <input type="text" name="Font" narrative="Font name. Default Arial. " stage="Font" />
+      <input type="number" name="Font Size" narrative="Size of font. Default 100." stage="Font Size" />
+      <input type="number" name="Opacity" narrative="Opacity of watermark in percentage (0-1). " stage="Opacity" />
+      <input type="number" name="Font Color Red" narrative="Amount of red (RGB). 0-255." stage="Font Color Red" />
+      <input type="number" name="Font Color Green" narrative="Amount of green (RGB). 0-255." stage="Font Color Green" />
+      <input type="number" name="Font Color Blue" narrative="Amount of blue (RGB). 0-255." stage="Font Color Blue" />
+      <input type="number" name="Rotation" narrative="Degrees to rotate watermark" stage="Rotation" />
+    </inputs>
+    <onsuccess>d529d203-34fb-4cc5-add9-7f2b14bdd074</onsuccess>
+  </stage>
+  <stage stageid="73c6b6f7-2518-4114-aa2f-c3004c93d8c7" name="End" type="End">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="8f4fef02-a1e1-4333-bf67-dee00ca8e782" name="Create PDF from Text" type="SubSheetInfo">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="fcbcfa7e-4dd6-4af5-823c-3f956f6bfb1f" name="Start" type="Start">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Filepath to pdf to be created from text" stage="Filepath" />
+      <input type="text" name="Text" narrative="Text to save in pdf" stage="Text" />
+    </inputs>
+    <onsuccess>c2da53f8-5c2d-41d4-8ead-72b3f69645b8</onsuccess>
+  </stage>
+  <stage stageid="0ca10902-cfd5-4931-8570-6d6b3a40813c" name="End" type="End">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="5b3f5ab6-07e4-4dda-981a-e0bf2f0f0b6a" name="Input" type="Block">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="c9b4a70d-f6b0-4b8e-8e30-98588b5a6fe1" name="Output" type="Block">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <display x="-270" y="60" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="04c3a491-9b11-48e3-a8e5-71ae1f2c170b" name="Filepath" type="Data">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="4498c448-8311-45ea-963f-fe193fa6bc1b" name="Password" type="Data">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="10170f19-fcf4-4dcb-924a-fa4b3b4e1d88" name="Content" type="Data">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="-195" y="90" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="385ac9d9-5e02-449e-9f0a-21a3e067006f" name="Extract Text" type="Code">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="password" expr="[Password]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="content" stage="Content" />
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>0a660671-7790-4846-80a2-f9f660cbdc56</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+content = "";
+try
+{
+	content = ReadPDF(filepath, password);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="9fa7b71f-06fb-4b83-bff2-530dc56e100e" name="Input" type="Block">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <display x="-270" y="-45" w="150" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="8511496b-9178-4170-84f7-eb56a0813c3a" name="Filepath" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b35a082f-1f94-4615-b14f-cb741753f924" name="Old Password" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ab1e9cd5-5df5-4b27-802d-d0272892e6da" name="New Password" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="adf84c6b-292e-4d38-920c-6ae3b2536c01" name="Change Password" type="Code">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="15" y="15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="newPassword" expr="[New Password]" />
+      <input type="text" name="oldPassword" expr="[Old Password]" />
+      <input type="text" name="encryption" expr="[Encryption]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>13a1c47a-cd79-4aa9-8fd7-183507238c18</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	SetPassword(filepath, oldPassword, newPassword, encryption);
+}
+catch (Exception e)
+{
+	message = e.Message;
+	success = false;
+}]]></code>
+  </stage>
+  <stage stageid="d0a0ec6b-ac50-42c6-8112-60e5d2d5bf72" name="Encryption" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="75" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">AES256</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0ef3cc36-1963-458b-80a9-d6c830279071" name="Output" type="Block">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <display x="-270" y="120" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="3045ea6d-698d-434d-88b4-d9a609097205" name="Success" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="668f74d2-8f93-4a8c-9c36-78f081a62a18" name="Message" type="Data">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="-195" y="180" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7b6404d3-ed17-4e6f-8746-0c3a79cd9e22" name="Input" type="Block">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="35e5704e-7c9c-414f-91f1-8ec53081e8e6" name="Filepath" type="Data">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="03e653eb-6095-4b26-91d1-6649a02b3126" name="Output Folder" type="Data">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2e8f1623-9db5-4660-8f6d-940c33353983" name="Split" type="Code">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="password" expr="[Password]" />
+      <input type="text" name="outputFolder" expr="[Output Folder]" />
+    </inputs>
+    <outputs>
+      <output type="text" name="message" stage="Message" />
+      <output type="flag" name="success" stage="Success" />
+      <output type="collection" name="documents" stage="Documents" />
+    </outputs>
+    <onsuccess>88c044ee-1418-408f-bc8b-cd1b73146d38</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+DataTable dt = new DataTable();
+try
+{
+	dt = SplitPDF(filepath, password, outputFolder);
+}
+catch (Exception e)
+{
+	message = e.Message;
+	success = false;
+}
+documents = dt.Copy();]]></code>
+  </stage>
+  <stage stageid="312005df-e8bb-4c10-8c6a-b2c8586ecec2" name="Password" type="Data">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fd14c7d2-f55b-49a3-bcd6-153b22a503fe" name="Output" type="Block">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <display x="-270" y="90" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="70f5e47f-4f14-480e-b5f1-7b3a3edad96f" name="Success" type="Data">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="170e4e59-162d-4199-b0f0-22aa069d96aa" name="Message" type="Data">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <loginhibit />
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d8e0920d-6788-4ea3-a3fe-814ecdb623af" name="Documents" type="Collection">
+    <subsheetid>d7f584cb-5dd5-44fe-a967-5a02fd87fa7f</subsheetid>
+    <display x="-195" y="180" w="150" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="7283bc75-a54a-4d01-988d-0d2bc09afaba" name="Input" type="Block">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="6a367dbc-d8ea-4644-99be-f9435bc110e9" name="Output" type="Block">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <display x="-270" y="60" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="376b8650-14e2-42aa-b985-0c6e1705fb0c" name="Filepath" type="Data">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0c85ab88-c94f-436a-9137-1fbe6da27e4d" name="Password" type="Data">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="99600ad4-f4d9-438a-b456-1c644ecb954c" name="Pages" type="Data">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="-195" y="90" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c20bc2f3-9787-4a91-b6fe-6859f09e8108" name="Get Page Count" type="Code">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="password" expr="[Password]" />
+    </inputs>
+    <outputs>
+      <output type="number" name="pages" stage="Pages" />
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>31ace845-2b00-412e-9aa4-a00afa32d457</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+pages = 0;
+try
+{
+	pages = GetPageCount(filepath, password);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="7a75b853-cabb-41f3-970e-bc4e83356d3b" name="Files" type="Collection">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>collection</datatype>
+    <private />
+    <alwaysinit />
+    <collectioninfo>
+      <field name="Path" type="text" />
+    </collectioninfo>
+    <initialvalue>
+      <row>
+        <field name="Path" type="text" value="" />
+      </row>
+    </initialvalue>
+  </stage>
+  <stage stageid="5fbbe9ef-8096-4acb-ad3a-54af68a028bc" name="Input" type="Block">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="f1631bff-b1a0-482f-9ce7-020c55721093" name="Merged Filepath" type="Data">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="8382d8ec-7aaa-44bc-ae9d-203e531a6aa6" name="Merge" type="Code">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="collection" name="files" expr="[Files]" />
+      <input type="text" name="filepath" expr="[Merged Filepath]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>26801041-92d8-490c-bdae-d8bace005d7e</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	MergePDF(files, filepath);
+}
+catch(Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="f3956c1e-6f96-44f0-8402-d28e0da053a0" name="Success" type="Data">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <display x="-195" y="90" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="dd38f104-2ddb-4eb8-ab93-db047c62285f" name="Message" type="Data">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="2257d6fe-0052-43d2-96f4-59de5de6c6a1" name="Output" type="Block">
+    <subsheetid>08eef38d-430c-4ce5-af4e-f59e792c2d38</subsheetid>
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="cf5dadc5-022c-4ae4-aa7d-d6f9614f87b7" name="Extracted Filepath" type="Data">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f2a2d99b-3a1c-499f-941f-d8427ad6664a" name="Input" type="Block">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <display x="-270" y="-45" w="150" h="120" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="f666f1e1-4bc9-4557-a35a-0d4c7eb19f2b" name="Original Filepath" type="Data">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9a790c97-2eb7-4e8c-b9ef-2fe0f8084500" name="Pages" type="Data">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c32de3a5-c310-49cb-84b0-d8e86b7be77a" name="Extract" type="Code">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="pageRange" expr="[Pages]" />
+      <input type="text" name="originalFilepath" expr="[Original Filepath]" />
+      <input type="text" name="extractedFilepath" expr="[Extracted Filepath]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>b90c24f3-2ad3-4ed6-852e-6f78ff3e9fb5</onsuccess>
+    <code><![CDATA[message = "";
+success = true;
+try
+{
+	List<int> pages = new List<int>();
+	int startPage = new int();
+	int endPage = new int();
+	string[] parts = pageRange.Split(',');
+	
+	if( parts.Length > 1)
+	{
+		foreach(string part in parts)
+		{
+			string[] xs = part.Split('-');
+			startPage = Convert.ToInt32(xs[0]);
+			endPage = startPage; 
+			if (xs.Length > 1)
+			{
+				endPage = Convert.ToInt32(xs[1]);
+				int x = startPage;
+				do
+				{
+					pages.Add(Convert.ToInt32(x)-1);
+					x++;
+				} while (x<= endPage);
+			}
+			else
+			{
+				pages.Add(startPage-1);
+			}
+		};
+	}
+	else
+	{
+		pages.Add(Convert.ToInt32(pageRange)-1);
+	}
+
+	ExtractPages(extractedFilepath, originalFilepath, pages);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="484bb51c-a98f-4342-aba3-155360dfc649" name="Success" type="Data">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="17232184-cc54-4254-82ca-4df8bff35c91" name="Message" type="Data">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="69f9ed37-d8b6-42c2-9ec2-f7b5ddb583e5" name="Output" type="Block">
+    <subsheetid>01e7a2fa-5c60-481c-8d5d-834d9335ada2</subsheetid>
+    <display x="-270" y="90" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="77168537-9421-4e40-8a91-274c54cd33b6" name="Input" type="Block">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <display x="-270" y="-45" w="150" h="330" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="1b6c7230-8903-496e-b40d-841c1a9a6f09" name="Filepath" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="468fc7b1-4066-4bd1-a4ed-5ecb2e5d03d2" name="Password" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d90abb3d-a882-46b5-a1d7-3439d8e5b9e6" name="Watermark" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="25c86b7a-608c-4fbd-b524-e3aff649eaeb" name="Font" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="75" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue xml:space="preserve">Arial</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3eb990ee-382b-40c6-b082-6088db0b0c28" name="Font Size" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="105" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>100</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="b1de4d2d-5c69-4222-94b8-99b50ea03dd4" name="Opacity" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="135" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0.5</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="d529d203-34fb-4cc5-add9-7f2b14bdd074" name="Watermark Text" type="Code">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="password" expr="[Password]" />
+      <input type="text" name="watermark" expr="[Watermark]" />
+      <input type="text" name="fontName" expr="[Font]" />
+      <input type="number" name="fontSize" expr="[Font Size]" />
+      <input type="number" name="opacity" expr="[Opacity]" />
+      <input type="number" name="r" expr="[Font Color Red]" />
+      <input type="number" name="g" expr="[Font Color Green]" />
+      <input type="number" name="b" expr="[Font Color Blue]" />
+      <input type="number" name="rotation" expr="[Rotation]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>73c6b6f7-2518-4114-aa2f-c3004c93d8c7</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	AddWatermarkText(filepath, password, watermark, fontName, (int)fontSize, (float)opacity, (int)r, (int)g, (int)b, (float)rotation); 
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="2f98c254-9bf8-4461-808a-c6c8c224083f" name="Font Color Red" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="165" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>255</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a8873259-75b0-4960-b95d-abcaa21c547b" name="Font Color Green" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="195" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f98ff10f-97fb-4404-932e-14787cc5168f" name="Font Color Blue" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="225" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f2adc72e-1027-4be3-8b5c-9b3d1771eaad" name="Rotation" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <loginhibit />
+    <display x="-195" y="255" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a5c4c6d1-35c0-42ea-ae85-2a840bee44c5" name="Success" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <display x="-195" y="330" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="ac1ff04e-02ff-43a1-8e81-0998b7ba3c5e" name="Message" type="Data">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <display x="-195" y="360" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0a84147b-e906-48dc-8896-99028cbb51d6" name="Output" type="Block">
+    <subsheetid>00549bf2-b3c1-4aa6-8313-ac9f79a5b0b3</subsheetid>
+    <display x="-270" y="300" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="f19b396a-e31f-4b95-959c-0d95c9a09217" name="Add Watermark - Image" type="SubSheetInfo">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <narrative>Adds an image in the midle of each page</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="cc3e8ac6-51dd-46fc-8ecc-43218d3bd6db" name="Start" type="Start">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Filepath to PDF file" stage="Filepath" />
+      <input type="text" name="Password" narrative="OPTIONAL: Provide password if protected" stage="Password" />
+      <input type="text" name="Imagepath" narrative="Filepath to image to add to PDF" stage="Imagepath" />
+      <input type="number" name="Opacity" narrative="Opacity of the image watermark added" stage="Opacity" />
+    </inputs>
+    <onsuccess>373f126d-2ba0-4175-8dde-cfe2e8e5d05a</onsuccess>
+  </stage>
+  <stage stageid="f06b3e90-8b88-40c5-8502-d97e54bec39a" name="End" type="End">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="f222acf3-7ce0-401d-bfa1-e9a31128b4e3" name="Input" type="Block">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <display x="-270" y="-45" w="150" h="150" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="26f74a02-e6ef-482d-9dde-08de64a5cf2d" name="Output" type="Block">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <display x="-270" y="120" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="df07f6cf-d4f1-4eb0-9104-dec6af1d342d" name="Success" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="142ca735-00f4-44a3-8f10-5249800fc558" name="Message" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <display x="-195" y="180" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="6158975c-fd5d-4fca-992e-21a856a4189c" name="Filepath" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="a889ba49-d185-4bbd-b631-12449c93a172" name="Password" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="f85cd44f-cb48-4445-92ca-25ac9f5310e3" name="Imagepath" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="-195" y="45" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="373f126d-2ba0-4175-8dde-cfe2e8e5d05a" name="Watermark Image" type="Code">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="password" expr="[Password]" />
+      <input type="text" name="imagepath" expr="[Imagepath]" />
+      <input type="number" name="opacity" expr="[Opacity]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>f06b3e90-8b88-40c5-8502-d97e54bec39a</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	AddWatermarkImage(filepath, password, imagepath, (int)opacity);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}
+]]></code>
+  </stage>
+  <stage stageid="c0062fb6-a547-4415-9580-d96623b93d14" name="Opacity" type="Data">
+    <subsheetid>c2db3774-8ad7-45d3-aa27-9d34b1d13eab</subsheetid>
+    <loginhibit />
+    <display x="-195" y="75" w="150" h="30" />
+    <datatype>number</datatype>
+    <initialvalue>0.5</initialvalue>
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="9e36b8ee-371f-441c-b5bb-dd9c511b1611" name="Input" type="Block">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="cfeb73bc-3d91-4c68-b648-98b99c52db8f" name="Output" type="Block">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="52d036a9-7dea-411d-bd83-53d96a751664" name="Success" type="Data">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <display x="-195" y="90" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c77b3763-2af6-42d5-aed6-310d62ed9cbb" name="Message" type="Data">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="1978e35d-2a2c-4a76-97d3-80b146ecab81" name="Filepath" type="Data">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="26f38353-b9df-4c9a-abb6-e30156f6599d" name="Text" type="Data">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c2da53f8-5c2d-41d4-8ead-72b3f69645b8" name="Create from Text" type="Code">
+    <subsheetid>44cd2379-9f9e-4116-8666-150a5f97bbdc</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="text" expr="[Text]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>0ca10902-cfd5-4931-8570-6d6b3a40813c</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	CreatePDFText(filepath, text);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}]]></code>
+  </stage>
+  <stage stageid="11c148ae-16c2-4d63-81a9-12e67eb86353" name="Success" type="Data">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="e9244ebe-a881-421a-8174-f564f9d2e969" name="Message" type="Data">
+    <subsheetid>b73f7c23-c37f-422f-90d2-baec3ade9af8</subsheetid>
+    <loginhibit />
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="77b42cbe-1309-40e1-86ee-24aa05b7308b" name="Success" type="Data">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="fc3acbb7-b585-42f5-94a4-be42b1529730" name="Message" type="Data">
+    <subsheetid>3b29efed-4741-429d-9828-7c9545864d35</subsheetid>
+    <display x="-195" y="150" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="3657375f-2bc6-48ac-8590-e842e03214e9" name="Remove Password" type="SubSheetInfo">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <narrative>Remove a password from a PDF file</narrative>
+    <display x="-195" y="-105" w="150" h="90" />
+  </stage>
+  <stage stageid="27777ef6-7a1b-4a7b-862a-e53f71c76d5a" name="Start" type="Start">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="15" y="-105" />
+    <inputs>
+      <input type="text" name="Filepath" narrative="Filepath to PDF to remove password from" stage="Filepath" />
+      <input type="text" name="Password" narrative="Current password to the PDF file" stage="Old Password" />
+    </inputs>
+    <onsuccess>25d275da-4881-4082-9bcf-b920ef18c7fc</onsuccess>
+  </stage>
+  <stage stageid="1c38f62e-c479-4fc5-b663-7f9c36a65b6c" name="End" type="End">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="15" y="90" />
+    <outputs>
+      <output type="flag" name="Success" stage="Success" />
+      <output type="text" name="Message" stage="Message" />
+    </outputs>
+  </stage>
+  <stage stageid="48391817-3ecd-4e84-be92-374854239d17" name="Input" type="Block">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <display x="-270" y="-45" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="339966" />
+  </stage>
+  <stage stageid="0e48d50b-b34c-4225-a192-04e3745e1f05" name="Filepath" type="Data">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="-195" y="-15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="0c8218fb-8119-4a31-b706-292295e5c74d" name="Old Password" type="Data">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="-195" y="15" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="5b6090c6-6976-4ccd-a48a-bd68df449981" name="Output" type="Block">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <display x="-270" y="60" w="150" h="90" />
+    <font family="Segoe UI" size="10" style="Regular" color="3366FF" />
+  </stage>
+  <stage stageid="55f6dc36-f459-4645-9729-ae6d640c2a01" name="Success" type="Data">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="-195" y="90" w="150" h="30" />
+    <datatype>flag</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="c346f723-0d88-4343-bb07-5e891ebbdfee" name="Message" type="Data">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="-195" y="120" w="150" h="30" />
+    <datatype>text</datatype>
+    <initialvalue />
+    <private />
+    <alwaysinit />
+  </stage>
+  <stage stageid="25d275da-4881-4082-9bcf-b920ef18c7fc" name="Decrypt PDF" type="Code">
+    <subsheetid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</subsheetid>
+    <loginhibit />
+    <display x="15" y="-15" w="120" h="30" />
+    <inputs>
+      <input type="text" name="filepath" expr="[Filepath]" />
+      <input type="text" name="oldPassword" expr="[Old Password]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="success" stage="Success" />
+      <output type="text" name="message" stage="Message" />
+    </outputs>
+    <onsuccess>1c38f62e-c479-4fc5-b663-7f9c36a65b6c</onsuccess>
+    <code><![CDATA[success = true;
+message = "";
+try
+{
+	RemovePassword(filepath, oldPassword);
+}
+catch (Exception e)
+{
+	success = false;
+	message = e.Message;
+}
+]]></code>
+  </stage>
+  <stage stageid="46c3cbb6-30eb-4d47-9c96-0f407d5134b0" name="Remove Password?" type="Decision">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="15" y="-45" w="90" h="30" />
+    <decision expression="[New Password] = &quot;&quot;" />
+    <ontrue>adf42710-f955-443f-8ee9-51330c161e8d</ontrue>
+    <onfalse>adf84c6b-292e-4d38-920c-6ae3b2536c01</onfalse>
+  </stage>
+  <stage stageid="2fa62ca2-c5d4-487e-a312-21a4fa8e2db9" name="Remove Password" type="SubSheet">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="135" y="15" w="90" h="30" />
+    <inputs>
+      <input type="text" name="Filepath" friendlyname="Filepath" narrative="Filepath to PDF to remove password from" expr="[Filepath]" />
+      <input type="text" name="Password" friendlyname="Password" narrative="Current password to the PDF file" expr="[Old Password]" />
+    </inputs>
+    <outputs>
+      <output type="flag" name="Success" friendlyname="Success" stage="Success" />
+      <output type="text" name="Message" friendlyname="Message" stage="Message" />
+    </outputs>
+    <onsuccess>eb2a8a2f-969a-46d4-878c-73cc69e80713</onsuccess>
+    <processid>05dbb5c6-4418-4b72-8212-b6de0e7350a9</processid>
+  </stage>
+  <stage stageid="adf42710-f955-443f-8ee9-51330c161e8d" name="Anchor1" type="Anchor">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="135" y="-45" w="10" h="10" />
+    <onsuccess>2fa62ca2-c5d4-487e-a312-21a4fa8e2db9</onsuccess>
+  </stage>
+  <stage stageid="eb2a8a2f-969a-46d4-878c-73cc69e80713" name="Anchor2" type="Anchor">
+    <subsheetid>eeff18ef-79a2-4501-aaa4-62fdab995e90</subsheetid>
+    <loginhibit />
+    <display x="135" y="90" w="10" h="10" />
+    <onsuccess>13a1c47a-cd79-4aa9-8fd7-183507238c18</onsuccess>
+  </stage>
+</process>

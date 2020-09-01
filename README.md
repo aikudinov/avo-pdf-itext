@@ -8,7 +8,7 @@ This VBO needs iText library files to work.
 Default placement of the dll files is in the Blue Prism Automate folder. If you want to store the files somewhere else, you need to update the references in the VBO.
 iText library files can be found by following instructions on https://itextpdf.com or on iText github page: https://github.com/itext/itext7-dotnet. 
 
-No modifications are made to the iText library files in this solution.
+No modifications to the iText library files is needed to use the VBO.
 
 The actions in the VBO mainly consist of coded functions where example code from the iText knowledge base is the basis. Code language used is C#.
 
